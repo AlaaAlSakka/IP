@@ -26,5 +26,4 @@ class FileHandlerTest {
         ArrayList<Task> loadedList = fileHandler.load();
         assertEquals(list, loadedList);
     }
-
 }
