@@ -12,10 +12,15 @@ public class FileHandler
 {
     private String filepath;
 
+
     public FileHandler(String filepath) {
         this.filepath = filepath;
     }
 
+    /**
+     * Save the list of task to a file
+     * @param list The list to be saved.
+     */
     public void save(ArrayList<Task> list)
 {
     try
@@ -31,7 +36,11 @@ public class FileHandler
     }
 }
 
-public ArrayList<Task> load()
+    /**
+     * load the list of task from the file
+     * @return list
+     */
+    public ArrayList<Task> load()
 {
     ArrayList<Task> list = new ArrayList<>();
     try

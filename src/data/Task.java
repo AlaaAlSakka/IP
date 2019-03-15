@@ -4,7 +4,8 @@ import java.io.Serializable;
 import java.time.LocalDate;
 
 
-public class Task implements Comparable<Task>, Serializable {
+public class Task implements Comparable<Task>, Serializable
+{
 
     private String project;
     private String title;
@@ -21,44 +22,78 @@ public class Task implements Comparable<Task>, Serializable {
     }
 
 
-
+    /**
+     * get the title name
+     * @return title
+     */
     public String getTitle()
     {
         return title;
     }
 
+    /**
+     * set the title name
+     * @param title
+     */
     public void setTitle(String title)
     {
 
         this.title = title;
     }
 
+    /**
+     * get the due date
+     * @return the due date
+     */
+
     public LocalDate getDueDate()
     {
+
         return dueDate;
     }
+
+    /**
+     * set the due date
+     * @param dueDate
+     */
 
     public void setDueDate(LocalDate dueDate)
     {
         this.dueDate = dueDate;
     }
 
+    /**
+     * set status
+     * @param status
+     */
     public void setStatus(String status)
     {
         this.status = status;
     }
 
+    /**
+     *  get status
+     * @return the status of the task
+     */
     public String getStatus()
     {
         return status;
     }
 
+    /**
+     * get project name
+     * @return the project name
+     */
     public String getProject()
     {
 
         return project;
     }
 
+    /**
+     * set project name
+     * @param project
+     */
 
     public void setProject(String project)
     {
@@ -79,7 +114,8 @@ public class Task implements Comparable<Task>, Serializable {
     }
 
     @Override
-    public boolean equals(Object otherTask){
+    public boolean equals(Object otherTask)
+    {
         if (!(otherTask instanceof Task))
             return false;
         Task taskToCompare = (Task) otherTask;
